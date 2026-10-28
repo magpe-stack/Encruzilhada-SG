@@ -1,0 +1,226 @@
+:root {
+  --bg: #f6f5fb;
+  --card: #ffffff;
+  --texto: #22213a;
+  --suave: #6a688a;
+  --borda: #dcd9ee;
+  --destaque: #5b4fcf;
+  --destaque-2: #3f3699;
+  --exemplo-bg: #f1effc;
+  --topo: #2b2a4c;
+  --raio: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15142a;
+    --card: #1e1d38;
+    --texto: #ececf8;
+    --suave: #a3a1c4;
+    --borda: #34325a;
+    --destaque: #8f84ff;
+    --destaque-2: #b3abff;
+    --exemplo-bg: #27254a;
+    --topo: #100f22;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+.container {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.topo {
+  background: var(--topo);
+  color: #ffffff;
+  padding: 22px 0 18px;
+}
+
+.topo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.01em;
+}
+
+.sub {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+main { padding-top: 20px; padding-bottom: 40px; }
+
+.passo {
+  background: var(--card);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 18px 18px 16px;
+  margin-bottom: 16px;
+}
+
+.passo-cab {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.num {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--destaque);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.passo h2 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  padding-top: 4px;
+}
+
+.instrucao {
+  margin: 12px 0 8px;
+  font-size: 0.92rem;
+  color: var(--suave);
+  white-space: pre-line;
+}
+
+.btn-exemplo {
+  background: none;
+  border: none;
+  padding: 4px 0;
+  margin: 0 0 6px;
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--destaque);
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.btn-exemplo:hover,
+.btn-exemplo:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.exemplo-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.exemplo-wrap.aberto { grid-template-rows: 1fr; }
+
+.exemplo-interno { overflow: hidden; min-height: 0; }
+
+.exemplo {
+  margin: 2px 0 10px;
+  padding: 12px 14px;
+  background: var(--exemplo-bg);
+  border-left: 3px solid var(--destaque);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  white-space: pre-line;
+}
+
+textarea {
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--texto);
+  background: var(--bg);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+}
+
+textarea:focus {
+  outline: 2px solid var(--destaque);
+  outline-offset: 1px;
+}
+
+.painel {
+  background: var(--card);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 18px;
+}
+
+.painel h2 { margin: 0 0 12px; font-size: 1.05rem; }
+
+.botoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
+}
+
+.btn {
+  padding: 11px 14px;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--destaque-2);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn { color: #15142a; }
+}
+
+.btn:hover { filter: brightness(1.1); }
+.btn:focus-visible { outline: 2px solid var(--destaque); outline-offset: 2px; }
+
+.rodape-painel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: var(--suave);
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--suave);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exemplo-wrap { transition: none; }
+}
+
+@media (max-width: 480px) {
+  .passo { padding: 14px; }
+  .topo h1 { font-size: 1.25rem; }
+}
