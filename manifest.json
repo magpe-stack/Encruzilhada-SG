@@ -1,0 +1,20 @@
+{
+  "name": "Cena de Encruzilhada - Story Genius",
+  "short_name": "Encruzilhada",
+  "description": "Criador de Cenas de Encruzilhada (Crossroads Moments) baseado na metodologia Story Genius.",
+  "lang": "pt-BR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#2b2a4c",
+  "theme_color": "#2b2a4c",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
