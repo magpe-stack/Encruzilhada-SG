@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2b2a4c">
+  <meta name="description" content="Criador de Cenas de Encruzilhada (Crossroads Moments) - metodologia Story Genius">
+  <title>Cena de Encruzilhada</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container">
+      <h1>Cena de Encruzilhada</h1>
+      <p class="sub">Crossroads Moment &middot; Story Genius</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <form id="formulario" autocomplete="off" novalidate>
+      <div id="passos"></div>
+    </form>
+
+    <section class="painel" aria-labelledby="titulo-export">
+      <h2 id="titulo-export">Exportar</h2>
+      <div class="botoes">
+        <button type="button" class="btn" data-formato="json">JSON</button>
+        <button type="button" class="btn" data-formato="md">Markdown</button>
+        <button type="button" class="btn" data-formato="txt">TXT</button>
+        <button type="button" class="btn" data-formato="docx">DOCX</button>
+      </div>
+      <div class="rodape-painel">
+        <span id="status" role="status" aria-live="polite">Salvamento automático ativo</span>
+        <button type="button" id="limpar" class="btn-link">Limpar tudo</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
